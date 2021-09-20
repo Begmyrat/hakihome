@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/rounded_background_15dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="140dp"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="15dp">
+
+        <ImageView
+            android:id="@+id/i_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/t_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Irul Chair"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toRightOf="@+id/cardview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:fontFamily="@font/quicksand_bold"
+        android:textColor="@color/colorTextPrimary"/>
+
+    <TextView
+        android:id="@+id/t_tag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="%50 sale"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@+id/t_title"
+        app:layout_constraintLeft_toLeftOf="@+id/t_title"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="14sp"
+        android:fontFamily="@font/quicksand_medium"
+        android:textColor="@color/colorTextSecondary"/>
+
+    <TextView
+        android:id="@+id/t_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/quicksand_medium"
+        android:maxLines="3"
+        android:text="Ergonomical for human body curve"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/t_price"
+        app:layout_constraintLeft_toLeftOf="@+id/t_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t_tag"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TextView
+        android:id="@+id/t_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="102"
+        app:layout_constraintLeft_toLeftOf="@+id/t_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:fontFamily="@font/quicksand_bold"
+        android:textColor="@color/colorTextPrimary"/>
+
+    <TextView
+        android:id="@+id/t_priceFloat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=".00"
+        app:layout_constraintLeft_toRightOf="@+id/t_price"
+        app:layout_constraintBottom_toBottomOf="@id/t_price"
+        android:textSize="12sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:fontFamily="@font/quicksand_bold"
+        android:textColor="@color/colorTextPrimary"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_background"
+        android:backgroundTint="@color/colorTextPrimary"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="5dp"
+        android:text="Buy"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintLeft_toRightOf="@+id/t_priceFloat"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
